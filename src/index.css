@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Clean, professional palette with teal accent */
+    --background: 0 0% 100%;
+    --foreground: 220 20% 14%;
+
+    --card: 210 20% 98%;
+    --card-foreground: 220 20% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 14%;
+
+    /* Professional teal accent */
+    --primary: 172 66% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 220 20% 14%;
+
+    --muted: 210 15% 94%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 172 50% 95%;
+    --accent-foreground: 172 66% 32%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
+    --ring: 172 66% 40%;
+
+    --radius: 0.625rem;
+
+    /* Custom tokens */
+    --heading: 220 25% 10%;
+    --subheading: 220 15% 35%;
+    --caption: 220 10% 50%;
+    --surface: 210 25% 97%;
+    --surface-elevated: 0 0% 100%;
+    --divider: 220 15% 92%;
+  }
+
+  .dark {
+    --background: 220 20% 8%;
+    --foreground: 210 20% 94%;
+
+    --card: 220 18% 12%;
+    --card-foreground: 210 20% 94%;
+
+    --popover: 220 20% 8%;
+    --popover-foreground: 210 20% 94%;
+
+    --primary: 172 60% 50%;
+    --primary-foreground: 220 20% 8%;
+
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 210 20% 94%;
+
+    --muted: 220 15% 20%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 172 40% 15%;
+    --accent-foreground: 172 60% 70%;
+
+    --destructive: 0 62.8% 45%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 172 60% 50%;
+
+    --heading: 210 20% 96%;
+    --subheading: 210 15% 70%;
+    --caption: 210 10% 55%;
+    --surface: 220 18% 10%;
+    --surface-elevated: 220 18% 14%;
+    --divider: 220 15% 18%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-heading;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-4xl mx-auto px-5 sm:px-8;
+  }
+
+  .section-title {
+    @apply text-xs font-semibold uppercase tracking-widest text-primary mb-6;
+  }
+
+  .card-elevated {
+    @apply bg-surface-elevated rounded-xl border border-border/50 shadow-sm;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
